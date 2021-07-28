@@ -155,6 +155,11 @@ while running:
             foods.append(x)
             enemies.append(y)
             pg.mixer.Sound.play(eat)
+    for food in foods:
+        food.x += random.randint(-2, 2)
+        food.y += random.randint(-2, 2)
+        food.x2 += random.randint(-2, 2)
+        food.y2 += random.randint(-2, 2)
             
     for food in foods:
         food.draw()

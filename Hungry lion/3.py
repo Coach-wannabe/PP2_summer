@@ -123,6 +123,11 @@ while running:
     if pressed[pg.K_LEFT]: playerman.x -= dx
     if pressed[pg.K_DOWN]: playerman.y += dy 
     if pressed[pg.K_UP]: playerman.y -= dy
+        
+    if playerman.x <= 0: playerman.x = 0
+    if playerman.x >= 780: playerman.x = 780
+    if playerman.y <= 0: playerman.y = 0
+    if playerman.y >= 580: playerman.y = 580
 
     for food in foods:
         food.move()
